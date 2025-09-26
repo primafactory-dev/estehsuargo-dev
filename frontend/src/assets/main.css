@@ -1,0 +1,80 @@
+/* file: src/assets/main.css */
+
+/* 1. Reset Dasar & Font Global */
+/* Menggunakan font Roboto yang merupakan standar Material Design (Vuetify) */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+
+/* 2. Scrollbar Kustom yang Modern dan Sesuai Tema */
+/* Atur warna agar cocok dengan tema aplikasi Anda */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track (jalur scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle (bagian yang digeser) */
+::-webkit-scrollbar-thumb {
+  background: #689F38; /* Warna primer (hijau) dari tema Anda */
+  border-radius: 10px;
+}
+
+/* Handle saat di-hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #558B2F; /* Warna primer yang sedikit lebih gelap */
+}
+
+/* Untuk Dark Mode, scrollbar akan terlihat lebih baik dengan warna ini */
+.v-theme--dark ::-webkit-scrollbar-track {
+    background: #212121;
+}
+
+.v-theme--dark ::-webkit-scrollbar-thumb {
+    background: #9CCC65; /* Warna primer mode gelap */
+}
+
+.v-theme--dark ::-webkit-scrollbar-thumb:hover {
+    background: #8BC34A;
+}
+.swal2-confirm {
+  background-color: #689F38 !important; /* Warna primer (hijau) dari tema Anda */
+  color: #FFFFFF !important;             /* Teks putih agar kontras */
+  border-radius: 8px !important;
+}
+
+/* Mengatur warna default untuk Tombol Batal (Cancel) di Light Mode */
+.swal2-cancel {
+  background-color: #FFA726 !important; /* Warna sekunder (oranye) dari tema Anda */
+  color: #FFFFFF !important;             /* Teks putih agar kontras */
+  border-radius: 8px !important;
+}
+
+/* --- ATURAN KHUSUS UNTUK DARK MODE --- */
+/* Vuetify menambahkan class 'v-theme--dark' saat mode gelap aktif */
+
+/* Mengubah warna Tombol Konfirmasi (OK) di Dark Mode */
+.v-theme--dark .swal2-confirm {
+  background-color: #9CCC65 !important; /* Warna primer dark mode (hijau muda) */
+  color: #212121 !important;             /* Teks gelap agar kontras */
+}
+
+/* Mengubah warna Tombol Batal (Cancel) di Dark Mode */
+.v-theme--dark .swal2-cancel {
+  background-color: #FFB74D !important; /* Warna sekunder dark mode (oranye muda) */
+  color: #212121 !important;             /* Teks gelap agar kontras */
+}
+
+/* Mengubah warna latar belakang dan teks modal SweetAlert di Dark Mode */
+.v-theme--dark .swal2-popup {
+  background-color: #212121 !important; /* Warna surface dark mode */
+  color: #FFFFFF !important;             /* Warna teks default dark mode */
+}
