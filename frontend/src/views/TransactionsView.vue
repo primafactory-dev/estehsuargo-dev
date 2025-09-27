@@ -69,7 +69,7 @@ const transactions = ref([]);
 const loading = ref(true);
 
 const headers = [
-  { title: 'ID Transaksi', key: 'id' },
+  { title: 'ID Transaksi', key: 'id'},
   { title: 'Tanggal', key: 'createdAt' },
   { title: 'Nama Kasir', key: 'User.name' },
   { title: 'Metode Bayar', key: 'paymentMethod', sortable: false },
